@@ -20,7 +20,7 @@ test('username [-|_|\\d]$', () => {
   expect(user.validateUsername()).toBe('username not valid');
 });
 
-test('username [\\d{3}]', () => {
-  const user = new Validator('-alexey178_yung-ru');
+test('username \\d{3,}', () => {
+  const user = new Validator('alexey178_yung-ru');
   expect(user.validateUsername()).toBe('username not valid');
 });
